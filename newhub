@@ -257,7 +257,7 @@ local equipRemote = game:GetService("ReplicatedStorage").Package.Events.equipski
 local rebirthRemote = game:GetService("ReplicatedStorage").Package.Events.reb
 local npcPosition = CFrame.new(0, 0, 3)
 
-local Forms = {'Blanco', 'Ultra Ego', 'SSJR3', 'True God of Creation', 'True God of Destruction', 'Super Broly', 'LSSJG', 'LSSJ4',
+local Forms = {'Ultra Ego', 'SSJR3', 'True God of Creation', 'True God of Destruction', 'Super Broly', 'LSSJG', 'LSSJ4',
                'SSJG4', 'LSSJ3', 'SSJ5', 'Mystic Kaioken', 'LSSJ Kaioken', 'SSJ2 Kaioken', 'SSJR3', 'SSJB3',
                'God Of Destruction', 'God Of Creation', 'Jiren Ultra Instinct', 'Mastered Ultra Instinct', 'Godly SSJ2',
                'Ultra Instinct Omen', 'Evil SSJ', 'Blue Evolution', 'Dark Rose', 'Kefla SSJ2', 'SSJ Berserker',
@@ -688,7 +688,7 @@ Section:NewButton("Stat reader press f9", "After you execute press f9", function
             if player:IsA("Model") and player:FindFirstChild("Stats") then
                 local stats = player.Stats
                 local rebirth = stats:FindFirstChild("Rebirth")
-                local defense = stats:FindFirstChild("Defense")
+                local defense = stats:FindFirstChild("Energy")
     
                 if rebirth and defense then
                     local abbreviatedRebirth = rebirth.Value
@@ -701,13 +701,13 @@ Section:NewButton("Stat reader press f9", "After you execute press f9", function
                         abbreviatedRebirth = string.format("%.1fK", abbreviatedRebirth / 1000)
                     end
     
-                    -- Abreviar defensa
-                    if abbreviatedDefense >= 1000000000 then
-                        abbreviatedDefense = string.format("%.1fB", abbreviatedDefense / 1000000000)
-                    elseif abbreviatedDefense >= 1000000 then
-                        abbreviatedDefense = string.format("%.1fM", abbreviatedDefense / 1000000)
-                    elseif abbreviatedDefense >= 1000 then
-                        abbreviatedDefense = string.format("%.1fK", abbreviatedDefense / 1000)
+                    -- Abreviar energy
+                    if abbreviatedEnergy >= 1000000000 then
+                        abbreviatedEnergy = string.format("%.1fB", abbreviatedEnergy / 1000000000)
+                    elseif abbreviatedEnergy >= 1000000 then
+                        abbreviatedEnergy = string.format("%.1fM", abbreviatedEnergy / 1000000)
+                    elseif abbreviatedEnergy >= 1000 then
+                        abbreviatedEnergy = string.format("%.1fK", abbreviatedEnergy / 1000)
                     end
     
                     warn(player.Name .. " tiene " .. rebirth.Value .. " rebirths y " .. abbreviatedDefense .. " de stats de defensa.")
