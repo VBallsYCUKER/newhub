@@ -310,7 +310,7 @@ local function returnQuest(boolean)
     elseif (npc == "ntertain the greatest fusion") then
         npc = "SSJG Kakata"
     elseif (npc == "the destroyer: Vills (50%)") then
-        npc = "Vills (50%)"
+        npc = "Vegetable (GOD-In-Training)"
     elseif (npc == "3 X Fighters") then
         npc = "X Fighter Trainer"
     elseif (npc == "5 Evil Sayas") then
