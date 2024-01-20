@@ -175,7 +175,7 @@ end)
 
 MainSection:NewButton("Boss Farm","MultiBossfarm",function()
 
-    wait(5)
+    wait(10)
     game.ReplicatedStorage.Package.Events.Start:InvokeServer()
     game.ReplicatedStorage.Package.Events.Start:InvokeServer()
     game.ReplicatedStorage.Package.Events.Start:InvokeServer()
