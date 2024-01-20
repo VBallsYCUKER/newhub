@@ -175,6 +175,39 @@ end)
 
 MainSection:NewButton("Boss Farm","MultiBossfarm",function()
 
+    wait(5)
+    game.ReplicatedStorage.Package.Events.Start:InvokeServer()
+    game.ReplicatedStorage.Package.Events.Start:InvokeServer()
+    game.ReplicatedStorage.Package.Events.Start:InvokeServer()
+    game.Players.LocalPlayer.Character.Humanoid.Health = 0
+
+    wait(5)
+    local args = {
+        [1] = "Godly SSJ2"
+    }
+
+    game:GetService("ReplicatedStorage").Package.Events.equipskill:InvokeServer(unpack(args))
+    game:GetService("ReplicatedStorage").Package.Events.ta:InvokeServer()
+
+    wait(3)
+
+    if 'Blanco' then
+        local args = {
+            [1] = "Blanco"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Package"):WaitForChild("Events"):WaitForChild("equipskill"):InvokeServer(unpack(args))
+        game:GetService("ReplicatedStorage"):WaitForChild("Package"):WaitForChild("Events"):WaitForChild("ta"):InvokeServer()
+        
+    else
+        local args = {
+            [1] = "Beast"
+        }
+        
+        game:GetService("ReplicatedStorage"):WaitForChild("Package"):WaitForChild("Events"):WaitForChild("equipskill"):InvokeServer(unpack(args))
+        game:GetService("ReplicatedStorage"):WaitForChild("Package"):WaitForChild("Events"):WaitForChild("ta"):InvokeServer()
+
+    end
 
 _G.xFighter = 0
 _G.Kril = 10000
