@@ -664,13 +664,7 @@ local FormsList = {
         endrangevalue = 120000002,
         alignment = "Evil",
         rebirthReq = 20
-    },
-{
-        name = "Beast",
-        reqvalue = 120000003,
-        endrangevalue = 100000000000000000000000,
-        alignment = "Evil",
-        rebirthReq = 24
+
     }}, -- close evil
 
     Good = {{
@@ -811,13 +805,6 @@ local FormsList = {
         endrangevalue = 120000002,
         alignment = "Good",
         rebirthReq = 20
-    },
-{
-        name = "Beast",
-        reqvalue = 120000003,
-        endrangevalue = 100000000000000000000000,
-        alignment = "Good",
-        rebirthReq = 24
     }}
 }
 
